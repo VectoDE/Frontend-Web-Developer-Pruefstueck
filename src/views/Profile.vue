@@ -14,11 +14,28 @@
                         <p class="location">Stadt, Land</p>
                     </div>
                 </div>
+                <div class="info-block">
+                    <div class="follower-info">
+                        <span class="label">Follower</span>
+                        <span class="count">{{ followerCount }}</span>
+                    </div>
+                    <div class="contact-info">
+                        <span class="label">Kontakte</span>
+                        <span class="count">{{ contactCount }}</span>
+                    </div>
+                    <div class="friend-info">
+                        <span class="label">Freunde</span>
+                        <span class="count">{{ friendCount }}</span>
+                    </div>
+                </div>
                 <nav class="profile-nav">
                     <ul>
-                        <li @click="selectedTab = 'posts'">Beiträge</li>
-                        <li @click="selectedTab = 'projects'">Projekte</li>
-                        <li @click="selectedTab = 'certificates'">Zertifikate</li>
+                        <li :class="{ active: selectedTab === 'posts' }" @click="updateSelectedTab('posts')">Beiträge
+                        </li>
+                        <li :class="{ active: selectedTab === 'projects' }" @click="updateSelectedTab('projects')">
+                            Projekte</li>
+                        <li :class="{ active: selectedTab === 'certificates' }"
+                            @click="updateSelectedTab('certificates')">Zertifikate</li>
                     </ul>
                 </nav>
             </div>
@@ -35,7 +52,7 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref, markRaw } from 'vue';
 import PostsProfile from '@/components/PostsProfile.vue'; // Annahme: Komponente für Beiträge
 import ProjectsProfile from '@/components/ProjectsProfile.vue'; // Annahme: Komponente für Projekte
 import CertificatesProfile from '@/components/CertificatesProfile.vue'; // Annahme: Komponente für Zertifikate
@@ -47,16 +64,20 @@ const user = ref({
 });
 const backgroundImage = ref('https://via.placeholder.com/1500x500');
 
+const followerCount = '0';
+const contactCount = '0';
+const friendCount = '0';
+
 // Verwaltung des ausgewählten Tabs
 const selectedTab = ref('posts'); // Standardtab: Beiträge
-const selectedTabComponent = ref('PostsProfile');
+const selectedTabComponent = ref(markRaw(PostsProfile));
 
 // Dynamische Zuweisung der Komponente basierend auf ausgewähltem Tab
 const updateSelectedTab = (tab) => {
     selectedTab.value = tab;
-    if (tab === 'posts') selectedTabComponent.value = 'PostsProfile';
-    else if (tab === 'projects') selectedTabComponent.value = 'ProjectsProfile';
-    else if (tab === 'certificates') selectedTabComponent.value = 'CertificatesProfile';
+    if (tab === 'posts') selectedTabComponent.value = markRaw(PostsProfile);
+    else if (tab === 'projects') selectedTabComponent.value = markRaw(ProjectsProfile);
+    else if (tab === 'certificates') selectedTabComponent.value = markRaw(CertificatesProfile);
 };
 </script>
 
@@ -98,7 +119,10 @@ const updateSelectedTab = (tab) => {
 .profile-header {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
     margin-bottom: 20px;
+    padding: 1rem;
 }
 
 .profile-picture {
@@ -128,6 +152,39 @@ const updateSelectedTab = (tab) => {
     color: #999;
 }
 
+.info-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: -12rem;
+    margin-bottom: 6.5rem;
+    padding: 1rem;
+}
+
+.follower-info,
+.contact-info,
+.friend-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 20px;
+}
+
+.label {
+    font-size: 1rem;
+    color: #999;
+    text-transform: uppercase;
+    margin-top: 5px;
+    font-weight: 600;
+}
+
+.count {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+}
+
 .profile-nav {
     background-color: #f4f4f4;
     padding: 20px 0;
@@ -144,6 +201,11 @@ const updateSelectedTab = (tab) => {
     color: black;
     font-size: 16px;
     cursor: pointer;
+}
+
+.profile-nav li.active {
+    font-weight: bold;
+    color: green;
 }
 
 .profile-nav a {
@@ -163,5 +225,20 @@ const updateSelectedTab = (tab) => {
 .friends-section h2 {
     font-size: 24px;
     margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .profile-header {
+        margin-top: 0;
+    }
+
+    .info-block {
+        margin-top: -2rem;
+        margin-bottom: 0;
+    }
+
+    .profile-nav {
+        padding: 1rem;
+    }
 }
 </style>

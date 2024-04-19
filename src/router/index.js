@@ -8,6 +8,9 @@ import Contact from '../views/Contact.vue'
 import Login from '../views/Login.vue'
 import Register from '../views/Register.vue'
 import Profile from '../views/Profile.vue'
+import Settings from '../views/Settings.vue'
+
+import { logout } from './logout.js';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -56,6 +59,20 @@ const router = createRouter({
       path: '/profile',
       name: 'profile',
       component: Profile
+    },
+    {
+      path: '/settings',
+      name: 'settings',
+      component: Settings
+    },
+    {
+      path: '/logout',
+      name: 'Logout',
+      meta: { requiresAuth: true }, // Annahme: Sicherstellen, dass der Benutzer angemeldet ist
+      beforeEnter: (to, from, next) => {
+        logout(); // Aufruf der logout-Funktion aus logout.js
+        next('/login');
+      }
     }
   ]
 })

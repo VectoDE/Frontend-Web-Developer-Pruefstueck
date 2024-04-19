@@ -1,11 +1,13 @@
 <template>
     <div class="profile-content">
-        <h2>Beiträge</h2>
-        <div v-if="loading">Lade Beiträge...</div>
+        <h2 v-if="selectedTab === 'posts'">Beiträge</h2>
         <div v-else>
-            <div v-for="post in userPosts" :key="post.id" class="post">
-                <h3>{{ post.title }}</h3>
-                <p>{{ post.body }}</p>
+            <div v-if="loading">Lade Beiträge...</div>
+            <div v-else>
+                <div v-for="post in userPosts" :key="post.id" class="post">
+                    <h3>{{ post.title }}</h3>
+                    <p>{{ post.body }}</p>
+                </div>
             </div>
         </div>
     </div>
@@ -14,6 +16,7 @@
 <script setup>
 import { ref, onMounted } from 'vue';
 
+const selectedTab = ref('');
 const userPosts = ref([]);
 const loading = ref(true);
 

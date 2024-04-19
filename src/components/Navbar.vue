@@ -62,8 +62,14 @@
 
         <!-- Profil -->
         <ul class="profile-menu">
+                <RouterLink v-if="!loggedIn" to="/login" class="profile-link" style="margin-right: 1rem; margin-left: -1rem; text-transform: uppercase;">
+                    <span>Login</span>
+                </RouterLink>
+                <RouterLink v-if="!loggedIn" to="/register" class="profile-link" style="text-transform: uppercase;">
+                    <span>Register</span>
+                </RouterLink>
             <li class="relative">
-                <RouterLink to="/profile" class="profile-link">
+                <RouterLink v-if="loggedIn" to="/profile" class="profile-link">
                     <img src="" alt="Profilbild" width="30" height="30" class="rounded-full" />
                     <span>{{ userName }}</span>
                 </RouterLink>
@@ -72,7 +78,7 @@
                         <RouterLink to="/settings">Settings</RouterLink>
                     </li>
                     <li>
-                        <RouterLink to="/settings" @click="handleLogout">Logout</RouterLink>
+                        <RouterLink to="/logout">Logout</RouterLink>
                     </li>
                 </ul>
             </li>
@@ -83,9 +89,6 @@
 <script setup>
 import { RouterLink } from "vue-router";
 const userName = "";
-const handleLogout = () => {
-    // Füge hier die Logout-Logik ein
-};
 </script>
 
 <style scoped>
