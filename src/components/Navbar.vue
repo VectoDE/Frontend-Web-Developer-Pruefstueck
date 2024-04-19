@@ -2,7 +2,9 @@
     <!-- Nav -->
     <nav class="nav">
         <!-- Logo -->
-        <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
+        <a href="/">
+            <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
+        </a>
 
         <!-- Menü -->
         <ul class="menu">
@@ -16,19 +18,19 @@
                 <RouterLink to="/services">Services</RouterLink>
                 <ul class="submenu">
                     <li>
-                        <RouterLink to="/services">Service 1</RouterLink>
+                        <RouterLink to="/services/api-development">API Development</RouterLink>
                     </li>
                     <li>
-                        <RouterLink to="/services">Service 2</RouterLink>
+                        <RouterLink to="/services/web-development">Web Development</RouterLink>
                     </li>
                     <li>
-                        <RouterLink to="/services">Service 3</RouterLink>
+                        <RouterLink to="/services/app-development">App Development</RouterLink>
                     </li>
                     <li>
-                        <RouterLink to="/services">Service 4</RouterLink>
+                        <RouterLink to="/services/ui-ux-design">UI/UX Design</RouterLink>
                     </li>
                     <li>
-                        <RouterLink to="/services">Service 5</RouterLink>
+                        <RouterLink to="/services/graphic-design">Graphic Design</RouterLink>
                     </li>
                 </ul>
             </li>
@@ -39,10 +41,10 @@
                 <RouterLink to="/about">About</RouterLink>
                 <ul class="submenu">
                     <li>
-                        <RouterLink to="/about">About 1</RouterLink>
+                        <RouterLink to="/about/projects">Projects</RouterLink>
                     </li>
                     <li>
-                        <RouterLink to="/about">About 2</RouterLink>
+                        <RouterLink to="/about/teams">Teams</RouterLink>
                     </li>
                     <li>
                         <RouterLink to="/about">About 3</RouterLink>
@@ -109,6 +111,15 @@ const userName = "";
     width: 2rem;
     height: auto;
     margin-left: 1rem;
+    transform: rotateY(180deg);
+    transition: .9s /* Die Drehung soll 0,5 Sekunden dauern */;
+    transform-style: preserve-3d;
+}
+
+.logo:hover {
+    transform: rotateZ(180deg);
+    transition: .9s /* Die Drehung soll 0,5 Sekunden dauern */;
+    transform-style: preserve-3d;
 }
 
 .nav a {
@@ -144,15 +155,21 @@ nav a:hover {
     left: 0;
     background-color: #333;
     border-radius: 4px;
-    width: 150px; /* Feste Breite für das Dropdown-Menü */
-    margin-left: -1.5rem;
+    width: auto;
+    margin-left: -2.5rem;
 }
 
 /* Stil für die Dropdown-Menüpunkte */
 .submenu li {
-    margin-top: 5px;
-    white-space: nowrap; /* Verhindert das Umbruch von langen Texten */
-    padding: 10px; /* Neues Padding für jedes Listenelement */
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    white-space: nowrap;
+    transition: all 0.2s ease-in-out;
+    width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 /* Stil für den Benutzernamen im Dropdown-Menü */
@@ -186,7 +203,7 @@ nav a:hover {
     position: relative;
     list-style: none;
     margin-right: 2rem;
-    margin-left: -5rem;
+    margin-left: -9rem;
 }
 
 .profile-menu .submenu {

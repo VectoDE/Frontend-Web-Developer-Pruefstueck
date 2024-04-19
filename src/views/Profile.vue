@@ -15,17 +15,23 @@
                     </div>
                 </div>
                 <div class="info-block">
-                    <div class="follower-info">
-                        <span class="label">Follower</span>
-                        <span class="count">{{ followerCount }}</span>
+                    <div>
+                        <a href="/profile/follower_list" class="follower-info">
+                            <span class="label">Follower</span>
+                            <span class="count">{{ followerCount }}</span>
+                        </a>
                     </div>
-                    <div class="contact-info">
-                        <span class="label">Kontakte</span>
-                        <span class="count">{{ contactCount }}</span>
+                    <div>
+                        <a href="/profile/contact_list" class="contact-info">
+                            <span class="label">Contacts</span>
+                            <span class="count">{{ contactCount }}</span>
+                        </a>
                     </div>
-                    <div class="friend-info">
-                        <span class="label">Freunde</span>
-                        <span class="count">{{ friendCount }}</span>
+                    <div>
+                        <a href="/profile/friend_list" class="friend-info">
+                            <span class="label">Friends</span>
+                            <span class="count">{{ friendCount }}</span>
+                        </a>
                     </div>
                 </div>
                 <nav class="profile-nav">
@@ -169,11 +175,12 @@ const updateSelectedTab = (tab) => {
     flex-direction: column;
     align-items: center;
     margin: 0 20px;
+    text-decoration: none;
 }
 
 .label {
     font-size: 1rem;
-    color: #999;
+    color: #333333c4;
     text-transform: uppercase;
     margin-top: 5px;
     font-weight: 600;
@@ -182,7 +189,7 @@ const updateSelectedTab = (tab) => {
 .count {
     font-size: 1.2rem;
     font-weight: bold;
-    color: #333;
+    color: #333333c4;
 }
 
 .profile-nav {
