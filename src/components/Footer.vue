@@ -1,24 +1,14 @@
 <script setup>
-import { RiInstagramFill } from "oh-vue-icons/icons";
-
 const currentYear = new Date().getFullYear();
-const companyName = process.env.COMPANY_NAME;
 </script>
 
 <template>
     <footer>
-        <div class="legal-links">
-            <a href="#">Impressum</a>
-            <span>|</span>
-            <a href="#">Datenschutzerklärung</a>
-            <span>|</span>
-            <a href="#">Nutzungsbedingungen</a>
-        </div>
         <div class="contact-info">
-            <h3 style="text-decoration: none; color: white;">Kontaktiere uns</h3>
-            <p style="text-decoration: none; color: white;">Telefon: <a href="" style="text-decoration: none; color: aqua;">+49 157 51578216</a></p>
-            <p style="text-decoration: none; color: white;">Email: <a href="" style="text-decoration: none; color: aqua;">founder@uplytech.de</a></p>
-            <p style="text-decoration: none; color: white;">Support: <a href="" style="text-decoration: none; color: aqua;">support@example.com</a></p>
+            <h3>Contact us</h3>
+            <p>Phonenumber: <a href="">+49 157 51578216</a></p>
+            <p>E-Mail: <a href="">founder@uplytech.de</a></p>
+            <p>Support: <a href="">support@example.com</a></p>
         </div>
         <div class="social-media">
             <a href="#" class="social-icon linkedin">
@@ -64,8 +54,15 @@ const companyName = process.env.COMPANY_NAME;
                 </svg>
             </a>
         </div>
+        <div class="legal-links">
+            <a href="#">Impressum</a>
+            <span>|</span>
+            <a href="#">Privacy Policy</a>
+            <span>|</span>
+            <a href="#">Terms of Use</a>
+        </div>
 
-        <p>{{ currentYear }} &copy; <a href="" style="text-decoration: none; color: aqua;">{{ companyName }}</a> | Alle Rechte vorbehalten.</p>
+        <p>{{ currentYear }} &copy; <a href="" style="text-decoration: none; color: aqua;">Vecto.</a> | All rights reserved.</p>
     </footer>
 </template>
 
@@ -73,7 +70,15 @@ const companyName = process.env.COMPANY_NAME;
 footer {
     text-align: center;
     padding: 1rem;
-    margin-top: 50px;
+    background-color: #333;
+}
+
+footer a:hover {
+    color: green;
+}
+
+.legal-links {
+    padding-bottom: 1rem;
 }
 
 .legal-links a {
@@ -129,11 +134,16 @@ footer {
     margin-top: 1rem;
     margin-bottom: 10px;
     font-size: 18px;
-    color: #333;
+    color: white;
 }
 
 .contact-info p {
     margin: 5px 0;
-    color: #666;
+    color: white;
+}
+
+.contact-info a {
+    text-decoration: none;
+    color: aqua;
 }
 </style>

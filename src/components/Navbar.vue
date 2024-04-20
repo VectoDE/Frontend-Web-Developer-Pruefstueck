@@ -111,13 +111,13 @@ const userName = "";
     width: 2rem;
     height: auto;
     margin-left: 1rem;
-    transform: rotateY(180deg);
+    transform: rotateY(0deg);
     transition: .9s /* Die Drehung soll 0,5 Sekunden dauern */;
     transform-style: preserve-3d;
 }
 
 .logo:hover {
-    transform: rotateZ(180deg);
+    transform: rotateZ(360deg);
     transition: .9s /* Die Drehung soll 0,5 Sekunden dauern */;
     transform-style: preserve-3d;
 }
