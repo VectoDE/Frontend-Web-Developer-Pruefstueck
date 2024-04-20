@@ -2,6 +2,7 @@
 import { RiInstagramFill } from "oh-vue-icons/icons";
 
 const currentYear = new Date().getFullYear();
+const companyName = process.env.COMPANY_NAME;
 </script>
 
 <template>
@@ -64,7 +65,7 @@ const currentYear = new Date().getFullYear();
             </a>
         </div>
 
-        <p>{{ currentYear }} &copy; <a href="" style="text-decoration: none; color: aqua;">Vecto.</a> | Alle Rechte vorbehalten.</p>
+        <p>{{ currentYear }} &copy; <a href="" style="text-decoration: none; color: aqua;">{{ companyName }}</a> | Alle Rechte vorbehalten.</p>
     </footer>
 </template>
 
