@@ -14,11 +14,6 @@
             <h2>About</h2>
             <!-- Hier den Inhalt für die About-Seite einfügen -->
         </main>
-
-        <!-- Footer -->
-        <footer>
-            <p>&copy; 2024</p>
-        </footer>
     </div>
 </template>
 

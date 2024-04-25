@@ -24,11 +24,6 @@
                 <!-- Weitere Services hier einfügen -->
             </div>
         </main>
-
-        <!-- Footer -->
-        <footer>
-            <p>&copy; 2024</p>
-        </footer>
     </div>
 </template>
 

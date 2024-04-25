@@ -15,7 +15,7 @@
             <form @submit.prevent="submitForm">
                 <div class="form-group">
                     <label for="name">Name:</label>
-                    <input type="text" id="name" v-model="formData.name" required />
+                    <input type="text" id="name" v-model="formData.username" required />
                 </div>
                 <div class="form-group">
                     <label for="email">E-Mail:</label>
@@ -28,11 +28,6 @@
                 <button type="submit">Absenden</button>
             </form>
         </main>
-
-        <!-- Footer -->
-        <footer>
-            <p>&copy; 2024</p>
-        </footer>
     </div>
 </template>
 
@@ -43,7 +38,7 @@ import { ref } from 'vue'
 
 // Initialisiere die Daten für das Kontaktformular
 const formData = ref({
-    name: '',
+    username: '',
     email: '',
     message: ''
 })
@@ -53,7 +48,7 @@ const submitForm = () => {
     // Hier kannst du die Logik zum Absenden des Formulars implementieren, z.B. eine API-Anfrage
     console.log('Form submitted:', formData.value)
     // Nach dem Absenden kannst du das Formular zurücksetzen
-    formData.value.name = ''
+    formData.value.username = ''
     formData.value.email = ''
     formData.value.message = ''
 }

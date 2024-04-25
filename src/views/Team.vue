@@ -14,11 +14,6 @@
             <h2>Team</h2>
             <!-- Hier den Inhalt für die Team-Seite einfügen -->
         </main>
-
-        <!-- Footer -->
-        <footer>
-            <p>&copy; 2024</p>
-        </footer>
     </div>
 </template>
 

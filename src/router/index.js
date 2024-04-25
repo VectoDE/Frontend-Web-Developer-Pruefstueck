@@ -19,7 +19,7 @@ import Profile from '../views/Profile.vue'
 import ProfileFollowerList from '../views/FollowerList.vue'
 import ProfileContactList from '../views/ContactList.vue'
 import ProfileFriendList from '../views/FriendList.vue'
-import Settings from '../views/Settings.vue'
+import ProfileSettings from '../views/Settings.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -129,9 +129,9 @@ const router = createRouter({
       component: ProfileFriendList
     },
     {
-      path: '/settings',
+      path: '/profile/settings',
       name: 'Settings',
-      component: Settings
+      component: ProfileSettings
     },
   ]
 })

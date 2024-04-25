@@ -1,9 +1,9 @@
 <template>
   <div>
-    <!-- Header -->
+    <!-- Navbar -->
     <Navbar />
 
-    <!-- Hauptinhalt -->
+    <!-- Main Content -->
     <main>
       <router-view></router-view>
     </main>
