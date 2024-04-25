@@ -138,12 +138,6 @@ header {
   padding: 1.5rem;
 }
 
-header img {
-  transform: rotateY(0deg);
-  transition: transform 2s ease-in-out;
-  transform-style: preserve-3d;
-}
-
 header img:hover {
   opacity: 0.8;
   transform: rotateZ(360deg);
