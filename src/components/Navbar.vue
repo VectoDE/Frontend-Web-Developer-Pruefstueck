@@ -77,7 +77,7 @@
                 </RouterLink>
                 <ul class="submenu">
                     <li>
-                        <RouterLink to="/settings">Settings</RouterLink>
+                        <RouterLink to="/profile/settings">Settings</RouterLink>
                     </li>
                     <li>
                         <RouterLink to="/logout">Logout</RouterLink>

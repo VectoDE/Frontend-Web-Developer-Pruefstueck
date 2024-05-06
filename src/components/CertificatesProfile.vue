@@ -20,15 +20,14 @@ const loading = ref(true);
 
 onMounted(async () => {
     try {
-        // Hier Daten laden, z.B. von einer API
-        // Beispiel: Annahme, dass userCertificates von einer API geladen werden
         const response = await fetch('https://jsonplaceholder.typicode.com/posts?userId=1');
         const data = await response.json();
         userCertificates.value = data.map(certificate => ({
             id: certificate.id,
             name: certificate.title, // Annahme: Zertifikatname
             image: `https://example.com/certificates/${certificate.id}.pdf`, // Annahme: URL zum PDF-Bild des Zertifikats
-            // Weitere Eigenschaften wie Ausstellungsdatum, Zertifikatnummer, etc. können hier hinzugefügt werden
+            releaseDate: certificate.releaseDate,
+            certificateNumber: certificate.number,
         }));
         loading.value = false;
     } catch (error) {

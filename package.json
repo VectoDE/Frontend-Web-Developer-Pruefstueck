@@ -11,6 +11,7 @@
     "backend": "nodemon src/backend/server.js"
   },
   "dependencies": {
+    "axios": "^1.6.8",
     "bootstrap-icons": "^1.11.3",
     "bootstrap-vue": "^2.23.1",
     "dotenv": "^16.4.5",

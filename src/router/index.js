@@ -57,6 +57,11 @@ import DashboardUsers from '../views/auth/dashboard/users/Users.vue'
 import DashboardCreateUser from '../views/auth/dashboard/users/create_User.vue'
 import DashboardEditUser from '../views/auth/dashboard/users/edit_User.vue'
 
+//Import legal sites
+import LegalImpressum from '../views/legal/Impressum.vue'
+import LegalPrivacyPolicy from '../views/legal/PrivacyPolicy.vue'
+import LegalTermsOfUse from '../views/legal/TermsOfUse.vue'
+
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -64,81 +69,96 @@ const router = createRouter({
       path: '/',
       name: 'Home',
       component: Home,
+      meta: { title: 'Home' },
     },
     {
       path: '/news',
       name: 'News',
-      component: News
+      component: News,
+      meta: { title: 'News' },
     },
     {
       path: '/services',
       name: 'Services',
-      component: Services
+      component: Services,
+      meta: { title: 'Services' },
     },
     {
       path: '/services/api-development',
       name: 'API Development',
-      component: ServicesAPIDevelopment
+      component: ServicesAPIDevelopment,
+      meta: { title: 'API Development' },
     },
     {
       path: '/services/web-development',
       name: 'Web Development',
-      component: ServicesWebDevelopment
+      component: ServicesWebDevelopment,
+      meta: { title: 'Web Development' },
     },
     {
       path: '/services/app-development',
       name: 'App Development',
-      component: ServicesAppDevelopment
+      component: ServicesAppDevelopment,
+      meta: { title: 'App Development' },
     },
     {
       path: '/services/ui-ux-design',
       name: 'UI/UX Design',
-      component: ServicesUIUXDesign
+      component: ServicesUIUXDesign,
+      meta: { title: 'UI/UX Design' },
     },
     {
       path: '/services/graphic-design',
       name: 'Graphic Design',
-      component: ServicesGraphicDesign
+      component: ServicesGraphicDesign,
+      meta: { title: 'Graphic Design' },
     },
     {
       path: '/team',
       name: 'Team',
-      component: Team
+      component: Team,
+      meta: { title: 'Team' },
     },
     {
       path: '/about',
       name: 'About Us',
-      component: About
+      component: About,
+      meta: { title: 'About' },
     },
     {
       path: '/about/projects',
       name: 'Projects',
-      component: AboutProjects
+      component: AboutProjects,
+      meta: { title: 'Projects' },
     },
     {
       path: '/about/teams',
       name: 'Teams',
-      component: AboutTeams
+      component: AboutTeams,
+      meta: { title: 'Teams' },
     },
     {
       path: '/contact',
       name: 'Contact',
-      component: Contact
+      component: Contact,
+      meta: { title: 'Contact' },
     },
     {
       path: '/login',
       name: 'Login',
-      component: Login
+      component: Login,
+      meta: { title: 'Login' },
     },
     {
       path: '/register',
       name: 'Register',
-      component: Register
+      component: Register,
+      meta: { title: 'Register' },
     },
     {
       path: '/logout',
       name: 'Logout',
-      meta: { requiresAuth: true }, // Annahme: Sicherstellen, dass der Benutzer angemeldet ist
+      meta: { title: 'Logout', requiresAuth: true }, // Annahme: Sicherstellen, dass der Benutzer angemeldet ist
       beforeEnter: (to, from, next) => {
         logout(); // Aufruf der logout-Funktion aus logout.js
         next('/login');
@@ -147,165 +167,221 @@ const router = createRouter({
     {
       path: '/profile',
       name: 'Profile',
-      component: Profile
+      component: Profile,
+      meta: { title: 'Profile' },
     },
     {
       path: '/profile/follower_list',
       name: 'Follower List',
-      component: ProfileFollowerList
+      component: ProfileFollowerList,
+      meta: { title: 'Follower List' },
     },
     {
       path: '/profile/contact_list',
       name: 'Contact List',
-      component: ProfileContactList
+      component: ProfileContactList,
+      meta: { title: 'Contact List' },
     },
     {
       path: '/profile/friend_list',
       name: 'Friend List',
-      component: ProfileFriendList
+      component: ProfileFriendList,
+      meta: { title: 'Friend List' },
     },
     {
       path: '/profile/settings',
       name: 'Settings',
-      component: ProfileSettings
+      component: ProfileSettings,
+      meta: { title: 'Settings' },
     },
     {
       path: '/dashboard',
       name: 'Dashboard Overview',
-      component: DashboardOverview
+      component: DashboardOverview,
+      meta: { title: 'Dashboard' },
     },
     {
       path: '/dashboard/calender',
       name: 'Dashboard Calender',
-      component: DashboardCalender
+      component: DashboardCalender,
+      meta: { title: 'Calender' },
     },
     {
       path: '/dashboard/calender/edit_appointment',
       name: 'Dashboard Edit Appointment',
-      component: DashboardEditAppointment
+      component: DashboardEditAppointment,
+      meta: { title: 'Edit Appointment' },
     },
     {
       path: '/dashboard/calender/create_appointment',
       name: 'Dashboard Create Appointment',
-      component: DashboardCreateAppointment
+      component: DashboardCreateAppointment,
+      meta: { title: 'Create Appointment' },
     },
     {
       path: '/dashboard/categories',
       name: 'Dashboard Categories',
-      component: DashboardCategories
+      component: DashboardCategories,
+      meta: { title: 'Categories' },
     },
     {
       path: '/dashboard/categories/create_category',
       name: 'Dashboard Create Category',
-      component: DashboardCreateCategory
+      component: DashboardCreateCategory,
+      meta: { title: 'Create Category' },
     },
     {
       path: '/dashboard/categories/edit_category',
       name: 'Dashboard Edit Category',
-      component: DashboardEditCategory
+      component: DashboardEditCategory,
+      meta: { title: 'Edit Category' },
     },
     {
       path: '/dashboard/contracts',
       name: 'Dashboard Contracts',
-      component: DashboardContracts
+      component: DashboardContracts,
+      meta: { title: 'Contracts' },
     },
     {
       path: '/dashboard/contracts/create_contract',
       name: 'Dashboard Create Contract',
-      component: DashboardCreateContract
+      component: DashboardCreateContract,
+      meta: { title: 'Create Contract' },
     },
     {
       path: '/dashboard/contracts/edit_contract',
       name: 'Dashboard Edit Contract',
-      component: DashboardEditContract
+      component: DashboardEditContract,
+      meta: { title: 'Edit Contract' },
     },
     {
       path: '/dashboard/email',
       name: 'Dashboard Mail Overview',
-      component: DashboardMailOverview
+      component: DashboardMailOverview,
+      meta: { title: 'Mail Overview' },
     },
     {
       path: '/dashboard/email/create_email',
       name: 'Dashboard Create Email',
-      component: DashboardCreateEmail
+      component: DashboardCreateEmail,
+      meta: { title: 'Create Email' },
     },
     {
       path: '/dashboard/roles',
       name: 'Dashboard Roles',
-      component: DashboardRoles
+      component: DashboardRoles,
+      meta: { title: 'Roles' },
     },
     {
       path: '/dashboard/roles/create_role',
       name: 'Dashboard Create Role',
-      component: DashboardCreateRoles
+      component: DashboardCreateRoles,
+      meta: { title: 'Create Role' },
     },
     {
       path: '/dashboard/roles/edit_role',
       name: 'Dashboard Edit Role',
-      component: DashboardEditRoles
+      component: DashboardEditRoles,
+      meta: { title: 'Edit Role' },
     },
     {
       path: '/dashboard/tasks',
       name: 'Dashboard Tasks',
-      component: DashboardTask
+      component: DashboardTask,
+      meta: { title: 'Tasks' },
     },
     {
       path: '/dashboard/tasks/create_task',
       name: 'Dashboard Create Task',
-      component: DashboardCreateTask
+      component: DashboardCreateTask,
+      meta: { title: 'Create Task' },
     },
     {
       path: '/dashboard/tasks/edit_task',
       name: 'Dashboard Edit Task',
-      component: DashboardEditTaks
+      component: DashboardEditTaks,
+      meta: { title: 'Edit Task' },
     },
     {
       path: '/dashboard/teams',
       name: 'Dashboard Teams',
-      component: DashboardTeams
+      component: DashboardTeams,
+      meta: { title: 'Teams' },
     },
     {
       path: '/dashboard/teams/create_team',
       name: 'Dashboard Create Team',
-      component: DashboardCreateTeam
+      component: DashboardCreateTeam,
+      meta: { title: 'Create Team' },
     },
     {
       path: '/dashboard/teams/edit_team',
       name: 'Dashboard Edit Team',
-      component: DashboardEditTeam
+      component: DashboardEditTeam,
+      meta: { title: 'Edit Team' },
     },
     {
       path: '/dashboard/thema',
       name: 'Dashboard Themas',
-      component: DashboardThemas
+      component: DashboardThemas,
+      meta: { title: 'Themas' },
     },
     {
       path: '/dashboard/thema/create_thema',
       name: 'Dashboard Create Thema',
-      component: DashboardCreateThema
+      component: DashboardCreateThema,
+      meta: { title: 'Create Thema' },
     },
     {
       path: '/dashboard/thema/edit_thema',
       name: 'Dashboard Edit Thema',
-      component: DashboardEditThema
+      component: DashboardEditThema,
+      meta: { title: 'Edit Thema' },
     },
     {
       path: '/dashboard/users',
       name: 'Dashboard Users',
-      component: DashboardUsers
+      component: DashboardUsers,
+      meta: { title: 'Users' },
     },
     {
       path: '/dashboard/users/create_user',
       name: 'Dashboard Create User',
-      component: DashboardCreateUser
+      component: DashboardCreateUser,
+      meta: { title: 'Create User' },
     },
     {
       path: '/dashboard/users/edit_user',
       name: 'Dashboard Edit User',
-      component: DashboardEditUser
-    }
+      component: DashboardEditUser,
+      meta: { title: 'Edit User' },
+    },
+
+    {
+      path: '/legal/impressum',
+      name: 'Impressum',
+      component: LegalImpressum,
+      meta: { title: 'Impressum' },
+    },
+    {
+      path: '/legal/privacy-policy',
+      name: 'Privacy Policy',
+      component: LegalPrivacyPolicy,
+      meta: { title: 'Privacy Policy' },
+    },
+    {
+      path: '/legal/terms-of-use',
+      name: 'Terms of Use',
+      component: LegalTermsOfUse,
+      meta: { title: 'Terms of Use' },
+    },
   ]
-})
+});
+
+router.beforeEach((to, from, next) => {
+  document.title = to.meta.title || 'Your Website'; // Setze den Tab-Titel auf den Namen der Seite oder einen Standardwert
+  next();
+});
 
 export default router
 

@@ -27,7 +27,7 @@
                     <label class="form-check-label">
                         <input type="checkbox" class="form-check-input" name="checklegal_button" id="checklegal_button"
                             value="checkedValue">
-                        Accept the <a href="">Privacy Policy</a> and <a href="">Terms of Use</a>.
+                        Accept the <a href="/legal/privacy-policy">Privacy Policy</a> and <a href="/legal/terms-of-use">Terms of Use</a>.
                     </label>
                 </div>
                 <button type="submit">Register</button>

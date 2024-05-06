@@ -15,19 +15,19 @@
                     </div>
                 </div>
                 <div class="info-block">
-                    <div>
+                    <div class="profile_lists">
                         <a href="/profile/follower_list" class="follower-info">
                             <span class="label">Follower</span>
                             <span class="count">{{ followerCount }}</span>
                         </a>
                     </div>
-                    <div>
+                    <div class="profile_lists">
                         <a href="/profile/contact_list" class="contact-info">
                             <span class="label">Contacts</span>
                             <span class="count">{{ contactCount }}</span>
                         </a>
                     </div>
-                    <div>
+                    <div class="profile-lists">
                         <a href="/profile/friend_list" class="friend-info">
                             <span class="label">Friends</span>
                             <span class="count">{{ friendCount }}</span>
@@ -96,7 +96,7 @@ const updateSelectedTab = (tab) => {
 .profile {
     width: 100%;
     max-width: 100%;
-    background-color: #fff;
+    background-color: #333;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     margin-top: 0;
@@ -119,7 +119,7 @@ const updateSelectedTab = (tab) => {
 }
 
 .profile-info h2 {
-    color: black;
+    color: rgb(255, 255, 255);
 }
 
 .profile-header {
@@ -149,13 +149,13 @@ const updateSelectedTab = (tab) => {
 
 .headline {
     font-size: 18px;
-    color: #666;
+    color: #a7a7a7;
     margin-bottom: 5px;
 }
 
 .location {
     font-size: 16px;
-    color: #999;
+    color: #868686;
 }
 
 .info-block {
@@ -180,20 +180,28 @@ const updateSelectedTab = (tab) => {
 
 .label {
     font-size: 1rem;
-    color: #333333c4;
+    color: #ffffffc4;
     text-transform: uppercase;
     margin-top: 5px;
     font-weight: 600;
 }
 
+.label:hover {
+    color: green;
+}
+
 .count {
     font-size: 1.2rem;
     font-weight: bold;
-    color: #333333c4;
+    color: #ffffffc4;
+}
+
+.count:hover {
+    color: green;
 }
 
 .profile-nav {
-    background-color: #f4f4f4;
+    background-color: #272727;
     padding: 20px 0;
 }
 
@@ -205,9 +213,13 @@ const updateSelectedTab = (tab) => {
 
 .profile-nav li {
     margin: 0 20px;
-    color: black;
+    color: rgb(255, 255, 255);
     font-size: 16px;
     cursor: pointer;
+}
+
+.profile-nav li:hover {
+    color: green;
 }
 
 .profile-nav li.active {
