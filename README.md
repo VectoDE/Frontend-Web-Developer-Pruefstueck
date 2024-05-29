@@ -10,7 +10,7 @@ Dieses Projekt ist das Prüfstück für den Frontend Webentwicklerkurs und beste
 # Installation
 Klonen Sie dieses Repository auf Ihren lokalen Computer:
 ```
-git clone https://github.com/dein-benutzername/Frontend-Webentwickler-Pruefstueck.git
+git clone https://github.com/VectoDE/Frontend-Webentwickler-Pruefstueck.git
 ```
 
 Öffnen Sie das Projekt in Ihrem bevorzugten Code-Editor.
