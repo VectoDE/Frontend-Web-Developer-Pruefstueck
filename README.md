@@ -1,4 +1,4 @@
-# Frontend Webentwickler Pruefstuek
+# Frontend Webentwickler Pruefstueck
 Dieses Projekt ist das Prüfstück für den Frontend Webentwicklerkurs und besteht aus einer Webseite für ein Unternehmen mit verschiedenen Services. Die Webseite wurde mit HTML5, CSS3, JavaScript und Vue.js erstellt.
 
 # Features
