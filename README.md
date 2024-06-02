@@ -1,4 +1,4 @@
-# Frontend Webentwickler Pruefstuek
+# Frontend Webentwickler Pruefstueck
 Dieses Projekt ist das Prüfstück für den Frontend Webentwicklerkurs und besteht aus einer Webseite für ein Unternehmen mit verschiedenen Services. Die Webseite wurde mit HTML5, CSS3, JavaScript und Vue.js erstellt.
 
 # Features
@@ -10,7 +10,7 @@ Dieses Projekt ist das Prüfstück für den Frontend Webentwicklerkurs und beste
 # Installation
 Klonen Sie dieses Repository auf Ihren lokalen Computer:
 ```
-git clone https://github.com/dein-benutzername/Frontend-Webentwickler-Pruefstueck.git
+git clone https://github.com/VectoDE/Frontend-Webentwickler-Pruefstueck.git
 ```
 
 Öffnen Sie das Projekt in Ihrem bevorzugten Code-Editor.
