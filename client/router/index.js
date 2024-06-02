@@ -158,9 +158,9 @@ const router = createRouter({
     {
       path: '/logout',
       name: 'Logout',
-      meta: { title: 'Logout', requiresAuth: true }, // Annahme: Sicherstellen, dass der Benutzer angemeldet ist
+      meta: { title: 'Logout', requiresAuth: true },
       beforeEnter: (to, from, next) => {
-        logout(); // Aufruf der logout-Funktion aus logout.js
+        logout();
         next('/login');
       }
     },
@@ -379,7 +379,7 @@ const router = createRouter({
 });
 
 router.beforeEach((to, from, next) => {
-  document.title = to.meta.title || 'Your Website'; // Setze den Tab-Titel auf den Namen der Seite oder einen Standardwert
+  document.title = to.meta.title || 'Your Website';
   next();
 });
 

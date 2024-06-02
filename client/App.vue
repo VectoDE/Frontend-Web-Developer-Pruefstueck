@@ -28,5 +28,5 @@ watch(() => route.value, (to) => {
 </script>
 
 <style scoped>
-/* Füge hier allgemeine CSS-Stile hinzu */
+
 </style>

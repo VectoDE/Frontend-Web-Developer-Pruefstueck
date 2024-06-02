@@ -8,7 +8,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "frontend": "vite",
-    "backend": "nodemon src/backend/server.js"
+    "backend": "nodemon server/index.js"
   },
   "dependencies": {
     "axios": "^1.6.8",

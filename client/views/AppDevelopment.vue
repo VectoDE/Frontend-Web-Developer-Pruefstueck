@@ -1,6 +1,5 @@
 <template>
   <div>
-    <!-- Header -->
     <header class="header">
       <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
       <div class="wrapper">
@@ -9,7 +8,6 @@
       </div>
     </header>
 
-    <!-- Hauptinhalt -->
     <main>
       <h2>App-Entwicklung</h2>
       <p>
@@ -47,14 +45,12 @@
 <script setup>
 import "@/assets/main.css";
 
-// Daten für die Seite
 const pageTitle = "App-Entwicklung";
 const pageDescription =
   "Erfahren Sie mehr über unsere maßgeschneiderten App-Entwicklungsdienstleistungen.";
 </script>
 
 <style scoped>
-/* Hier den CSS-Stil für Header, Main, Footer und das Formular definieren */
 header {
   display: flex;
   flex-direction: column;

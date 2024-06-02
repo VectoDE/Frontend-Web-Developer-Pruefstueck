@@ -1,6 +1,5 @@
 <template>
   <div>
-    <!-- Header -->
     <header>
       <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
       <div class="wrapper">
@@ -9,7 +8,6 @@
       </div>
     </header>
 
-    <!-- Hauptinhalt -->
     <main>
       <h2>Services</h2>
       <div class="services">
@@ -32,19 +30,17 @@ const services = [
   {
     name: "Service 1",
     description: "Beschreibung des Service 1.",
-    link: "/service1-details", // Hier den Link zur Detailseite des Service 1 einfügen
+    link: "/service1-details",
   },
   {
     name: "Service 2",
     description: "Beschreibung des Service 2.",
-    link: "/service2-details", // Hier den Link zur Detailseite des Service 2 einfügen
+    link: "/service2-details",
   },
-  // Weitere Services hier einfügen
 ];
 </script>
 
 <style scoped>
-/* Deine CSS-Stile für Header, Main, Footer und Services */
 .services {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));

@@ -1,6 +1,5 @@
 <template>
     <div class="login-page">
-        <!-- Header -->
         <header>
             <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
             <div class="wrapper">
@@ -8,7 +7,6 @@
             </div>
         </header>
 
-        <!-- Hauptinhalt -->
         <main>
             <form @submit.prevent="login" class="login-form">
                 <div class="form-group">
@@ -43,9 +41,7 @@ const formData = ref({
 })
 
 const login = () => {
-    // Hier kannst du die Logik für die Anmeldung implementieren
     console.log('Login submitted:', formData.value)
-    // Nach der Anmeldung kannst du z.B. zur Startseite navigieren
     router.push('/')
 }
 </script>

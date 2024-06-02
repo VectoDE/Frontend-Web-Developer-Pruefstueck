@@ -31,30 +31,29 @@ const teams = ref([
     slogan: "Gemeinsam stark",
     experience: "5 Jahre",
     specialization: "Frontend-Entwicklung",
-    image: "team1.jpg", // Pfad zum Bild für Team 1
+    image: "team1.jpg",
   },
   {
     name: "Team 2",
     slogan: "Innovation ist unsere Stärke",
     experience: "7 Jahre",
     specialization: "Backend-Entwicklung",
-    image: "team2.jpg", // Pfad zum Bild für Team 2
+    image: "team2.jpg",
   },
   {
     name: "Team 3",
     slogan: "Kreativität kennt keine Grenzen",
     experience: "3 Jahre",
     specialization: "UI/UX Design",
-    image: "team3.jpg", // Pfad zum Bild für Team 3
+    image: "team3.jpg",
   },
   {
     name: "Team 3",
     slogan: "Kreativität kennt keine Grenzen",
     experience: "3 Jahre",
     specialization: "UI/UX Design",
-    image: "team3.jpg", // Pfad zum Bild für Team 3
+    image: "team3.jpg",
   },
-  // Weitere Teams hier einfügen
 ]);
 </script>
 

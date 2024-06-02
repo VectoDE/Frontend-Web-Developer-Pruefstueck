@@ -1,6 +1,5 @@
 <template>
   <div>
-    <!-- Header -->
     <header>
       <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
       <div class="wrapper">
@@ -9,7 +8,6 @@
       </div>
     </header>
 
-    <!-- Hauptinhalt -->
     <main>
       <h2>News</h2>
       <div class="news">
@@ -41,7 +39,7 @@ const articles = [
     publishedDate: "01.01.2024",
     topic: "Allgemein",
     publisher: "Autor 1",
-    image: "@/assets/news1.jpg", // Bildpfad für News 1
+    image: "@/assets/news1.jpg",
   },
   {
     title: "News 2",
@@ -50,14 +48,12 @@ const articles = [
     publishedDate: "02.01.2024",
     topic: "Technologie",
     publisher: "Autor 2",
-    image: "@/assets/news2.jpg", // Bildpfad für News 2
+    image: "@/assets/news2.jpg",
   },
-  // Weitere Neuigkeiten hier einfügen
 ];
 </script>
 
 <style scoped>
-/* Deine CSS-Stile für Header, Main, Footer und News */
 .news {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));

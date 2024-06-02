@@ -37,21 +37,19 @@ const projects = ref([
     image: "/assets/project1.jpg",
     date: "01.01.2024",
     topic: "Webentwicklung",
-    link: "/projekt1-details", // Optionaler Weiterleitungslink
+    link: "/projekt1-details",
   },
   {
     title: "Projekt 2",
     image: "/assets/project2.jpg",
     date: "15.02.2024",
     topic: "App-Entwicklung",
-    link: "/projekt2-details", // Optionaler Weiterleitungslink
+    link: "/projekt2-details",
   },
-  // Weitere Projekte hier einfügen
 ]);
 </script>
 
 <style scoped>
-/* Deine CSS-Stile für den Header und die Projekte */
 .projects-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));

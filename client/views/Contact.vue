@@ -1,6 +1,5 @@
 <template>
   <div>
-    <!-- Header -->
     <header class="header">
       <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
       <div class="wrapper">
@@ -9,7 +8,6 @@
       </div>
     </header>
 
-    <!-- Hauptinhalt -->
     <main>
       <h2 style="display: none;">Kontakt</h2>
       <form @submit.prevent="submitForm" class="contact-form">
@@ -35,18 +33,14 @@
 import "@/assets/main.css";
 import { ref } from "vue";
 
-// Initialisiere die Daten für das Kontaktformular
 const formData = ref({
   username: "",
   email: "",
   message: "",
 });
 
-// Methode zum Absenden des Formulars
 const submitForm = () => {
-  // Hier kannst du die Logik zum Absenden des Formulars implementieren, z.B. eine API-Anfrage
   console.log("Form submitted:", formData.value);
-  // Nach dem Absenden kannst du das Formular zurücksetzen
   formData.value.username = "";
   formData.value.email = "";
   formData.value.message = "";

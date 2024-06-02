@@ -1,6 +1,5 @@
 <template>
   <div>
-    <!-- Header -->
     <header class="header">
       <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
       <div class="wrapper">
@@ -9,7 +8,6 @@
       </div>
     </header>
 
-    <!-- Hauptinhalt -->
     <main>
       <h2>Was ist eine API?</h2>
       <p>
@@ -44,7 +42,6 @@
 <script setup>
 import "@/assets/main.css";
 
-// Daten für die Seite
 const pageTitle = "API Entwicklung";
 const pageDescription =
   "Hier erfahren Sie mehr über die Entwicklung von APIs und deren Funktionsweise.";
@@ -52,7 +49,6 @@ const supportedLanguages = ["JavaScript (Node.js)", "Python", "Java", "C#"];
 </script>
 
 <style scoped>
-/* Hier den CSS-Stil für Header, Main, Footer definieren */
 header {
   display: flex;
   flex-direction: column;

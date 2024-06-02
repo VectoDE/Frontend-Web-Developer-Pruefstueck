@@ -1,6 +1,5 @@
 <template>
   <div>
-    <!-- Header -->
     <header class="header">
       <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
       <div class="wrapper">
@@ -9,7 +8,6 @@
       </div>
     </header>
 
-    <!-- Hauptinhalt -->
     <main>
       <h2>Terms of Use</h2>
       <p>
@@ -36,7 +34,6 @@ import { RouterLink } from "vue-router";
 </script>
 
 <style scoped>
-/* Hier den CSS-Stil für Header, Main, Footer definieren */
 .header {
   display: flex;
   flex-direction: column;

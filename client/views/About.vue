@@ -1,6 +1,5 @@
 <template>
   <div>
-    <!-- Header -->
     <header>
       <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
       <div class="wrapper">
@@ -9,7 +8,6 @@
       </div>
     </header>
 
-    <!-- Hauptinhalt -->
     <main>
       <h2>Über Uns</h2>
       <p>

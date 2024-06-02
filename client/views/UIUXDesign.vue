@@ -1,6 +1,5 @@
 <template>
   <div>
-    <!-- Header -->
     <header class="header">
       <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
       <div class="wrapper">
@@ -9,43 +8,39 @@
       </div>
     </header>
 
-    <!-- Hauptinhalt -->
     <main>
-      <h2>Was ist Graphic Design?</h2>
+      <h2>Was ist UI/UX Design?</h2>
       <p>
-        Graphic Design ist die visuelle Gestaltung von Inhalten, um Informationen effektiv
-        zu kommunizieren. Es umfasst die Verwendung von Typografie, Bildern, Farben und
-        Layouts, um ansprechende und wirkungsvolle Designs zu erstellen.
+        UI/UX Design steht für User Interface Design und User Experience Design. Es
+        handelt sich um das Designen von Benutzeroberflächen und das Gestalten der
+        Nutzererfahrung, um die Zufriedenheit und das Vergnügen des Benutzers beim
+        Interagieren mit dem Produkt zu maximieren.
       </p>
 
-      <h2>Die Erstellung von Graphic Designs</h2>
-      <p>
-        Die Erstellung von Graphic Designs erfolgt in der Regel in mehreren Schritten:
-      </p>
+      <h2>Der Ablauf des UI/UX Design Prozesses</h2>
       <ol>
-        <li>Sammlung von Anforderungen und Zielsetzungen</li>
-        <li>Entwurf von Konzepten und Skizzen</li>
-        <li>
-          Digitale Umsetzung mit Grafikdesign-Software wie Adobe Illustrator oder Adobe
-          Photoshop
-        </li>
-        <li>Überarbeitung und Anpassung basierend auf Feedback</li>
-        <li>Endgültige Fertigstellung und Bereitstellung</li>
+        <li>Benutzerforschung und Analyse der Anforderungen</li>
+        <li>Erstellung von Wireframes und Prototypen</li>
+        <li>UI Design: Entwicklung der visuellen Gestaltungselemente</li>
+        <li>UX Design: Gestaltung der Benutzerinteraktion und -erfahrung</li>
+        <li>Usability-Tests und Feedback einholen</li>
+        <li>Iterative Verbesserungen basierend auf dem Feedback</li>
+        <li>Endgültige Umsetzung und Bereitstellung</li>
       </ol>
 
-      <h2>Beispiele für Graphic Designs</h2>
+      <h2>Beispiele für UI/UX Designs</h2>
       <div class="examples">
         <div class="example">
-          <img src="" alt="Beispiel 1" />
-          <p>Beispiel 1: Logo-Design für ein Unternehmen</p>
+          <img src="" alt="UI/UX Beispiel 1" />
+          <p>Beispiel 1: App-Benutzeroberfläche mit intuitivem Design</p>
         </div>
         <div class="example">
-          <img src="" alt="Beispiel 2" />
-          <p>Beispiel 2: Poster-Design für eine Veranstaltung</p>
+          <img src="" alt="UI/UX Beispiel 2" />
+          <p>Beispiel 2: Webseite mit benutzerfreundlicher Navigation</p>
         </div>
         <div class="example">
-          <img src="" alt="Beispiel 3" />
-          <p>Beispiel 3: Werbebanner für eine Produktkampagne</p>
+          <img src="" alt="UI/UX Beispiel 3" />
+          <p>Beispiel 3: Interaktiver Prototyp für ein Softwareprodukt</p>
         </div>
       </div>
     </main>
@@ -55,14 +50,12 @@
 <script setup>
 import "@/assets/main.css";
 
-// Daten für die Seite
-const pageTitle = "Graphic Design";
+const pageTitle = "UI/UX Design";
 const pageDescription =
-  "Hier erfahren Sie mehr über die Erstellung von Graphic Designs und sehen einige Beispiele.";
+  "Hier erfahren Sie mehr über UI/UX Design und sehen einige Beispiele.";
 </script>
 
 <style scoped>
-/* Hier den CSS-Stil für Header, Main, Footer und das Formular definieren */
 header {
   display: flex;
   flex-direction: column;

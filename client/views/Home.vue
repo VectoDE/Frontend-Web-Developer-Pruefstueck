@@ -1,6 +1,5 @@
 <template>
   <div>
-    <!-- Header -->
     <header>
       <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
       <div class="wrapper">
@@ -9,16 +8,13 @@
       </div>
     </header>
 
-    <!-- Hauptinhalt -->
     <main>
-      <!-- Über uns -->
       <section class="highlighted-section">
         <h2>Über uns</h2>
         <p>Hier könnte eine ausführliche Einführung über Ihr Unternehmen stehen, einschließlich seiner Mission, Vision
           und Werte.</p>
       </section>
 
-      <!-- Projekte -->
       <section class="projects-main">
         <h2>Projekte</h2>
         <div class="projects">
@@ -34,7 +30,6 @@
         </div>
       </section>
 
-      <!-- Rezensionen -->
       <section>
         <h2>Rezensionen</h2>
         <div class="reviews">
@@ -46,11 +41,9 @@
             <h3>Bewertung 2</h3>
             <p>Kurzer Auszug aus der Bewertung 2.</p>
           </div>
-          <!-- Weitere Bewertungen hier einfügen -->
         </div>
       </section>
 
-      <!-- Last Posts -->
       <section>
         <h2>Letzte Beiträge</h2>
         <div class="posts">
@@ -62,7 +55,6 @@
               <div class="metadata">
                 <span>Veröffentlichungsdatum: 01.01.2024</span>
                 <span>Ersteller: Autor des Beitrags 1</span>
-                <!-- Weitere Metadaten hier einfügen -->
               </div>
             </div>
           </div>
@@ -74,15 +66,12 @@
               <div class="metadata">
                 <span>Veröffentlichungsdatum: 02.01.2024</span>
                 <span>Ersteller: Autor des Beitrags 2</span>
-                <!-- Weitere Metadaten hier einfügen -->
               </div>
             </div>
           </div>
-          <!-- Weitere Beiträge hier einfügen -->
         </div>
       </section>
 
-      <!-- Partner -->
       <section>
         <h2>Partner</h2>
         <div class="partners">
@@ -92,7 +81,6 @@
           <div class="partner">
             <img src="" alt="Partner 2" />
           </div>
-          <!-- Weitere Partner hier einfügen -->
         </div>
       </section>
     </main>
@@ -103,7 +91,6 @@
 import '@/assets/main.css'
 import { ref } from 'vue';
 
-// Annahme: Du hast eine Liste von Projekten
 const projects = ref([
   { id: 1, name: 'Projekt 1', description: 'Beschreibung des Projekts 1.', image: '' },
   { id: 2, name: 'Projekt 2', description: 'Beschreibung des Projekts 2.', image: '' },
@@ -112,7 +99,6 @@ const projects = ref([
   { id: 5, name: 'Projekt 2', description: 'Beschreibung des Projekts 2.', image: '' },
   { id: 6, name: 'Projekt 2', description: 'Beschreibung des Projekts 2.', image: '' },
   { id: 7, name: 'Projekt 2', description: 'Beschreibung des Projekts 2.', image: '' },
-  // Weitere Projekte hier einfügen
 ]);
 </script>
 
@@ -126,7 +112,6 @@ const projects = ref([
 
 .main {
   width: 100%;
-  /* Anpassen nach Bedarf */
 }
 
 header {

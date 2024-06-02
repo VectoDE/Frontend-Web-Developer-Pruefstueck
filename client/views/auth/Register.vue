@@ -1,6 +1,5 @@
 <template>
     <div class="register-page">
-        <!-- Header -->
         <header>
             <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
             <div class="wrapper">
@@ -8,7 +7,6 @@
             </div>
         </header>
 
-        <!-- Hauptinhalt -->
         <main>
             <form @submit.prevent="register" class="register-form">
                 <div class="form-group">
@@ -49,9 +47,7 @@ const formData = ref({
 })
 
 const register = () => {
-    // Hier kannst du die Logik für die Registrierung implementieren
     console.log('Registration submitted:', formData.value)
-    // Nach der Registrierung kannst du z.B. zur Startseite navigieren
     router.push('/')
 }
 </script>
