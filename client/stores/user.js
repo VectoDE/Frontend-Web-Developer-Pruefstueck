@@ -15,7 +15,7 @@ const mutations = {
 const actions = {
     async login({ commit }, credentials) {
         try {
-            const response = await axios.post('/api/login', credentials); // Annahme: API-Endpunkt für den Login
+            const response = await axios.post('/api/login', credentials);
             const user = response.data.user;
 
             commit('setUser', user);

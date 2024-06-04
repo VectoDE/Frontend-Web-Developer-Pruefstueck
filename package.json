@@ -1,22 +1,31 @@
 {
   "name": "frontend-webdeveloper-test-piece",
   "version": "0.0.0",
+  "description": "",
   "private": true,
   "type": "module",
   "scripts": {
     "dev": "concurrently \"npm run frontend\" \"npm run backend\"",
-    "build": "vite build",
-    "preview": "vite preview",
     "frontend": "vite",
-    "backend": "nodemon server/index.js"
+    "backend": "nodemon server/backend.js",
+    "build": "vite build",
+    "preview": "vite preview"
   },
+  "author": "Vecto. (Tim Hauke)",
+  "license": "MIT",
   "dependencies": {
     "axios": "^1.6.8",
+    "body-parser": "^1.20.2",
     "bootstrap-icons": "^1.11.3",
     "bootstrap-vue": "^2.23.1",
+    "cors": "^2.8.5",
     "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "fs": "^0.0.1-security",
+    "mongoose": "^8.4.1",
     "nodemon": "^3.1.0",
     "oh-vue-icons": "^1.0.0-rc3",
+    "path": "^0.12.7",
     "pinia": "^2.1.7",
     "vue": "^3.4.21",
     "vue-router": "^4.3.0"

@@ -63,7 +63,7 @@ import LegalPrivacyPolicy from '../views/legal/PrivacyPolicy.vue'
 import LegalTermsOfUse from '../views/legal/TermsOfUse.vue'
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHistory(import.meta.env.CLIENT_BASE_URL),
   routes: [
     {
       path: '/',
@@ -379,7 +379,7 @@ const router = createRouter({
 });
 
 router.beforeEach((to, from, next) => {
-  document.title = to.meta.title || 'Your Website';
+  document.title = to.meta.title || 'Frontend Web Developer Prüfstück';
   next();
 });
 

@@ -64,16 +64,16 @@
 
         <!-- Profil -->
         <ul class="profile-menu">
-                <RouterLink v-if="!loggedIn" to="/login" class="profile-link" style="margin-right: 1rem; margin-left: -1rem; text-transform: uppercase;">
+                <RouterLink v-if="!isLoggedIn" to="/login" class="profile-link" style="margin-right: 1rem; margin-left: -1rem; text-transform: uppercase;">
                     <span>Login</span>
                 </RouterLink>
-                <RouterLink v-if="!loggedIn" to="/register" class="profile-link" style="text-transform: uppercase;">
+                <RouterLink v-if="!isLoggedIn" to="/register" class="profile-link" style="text-transform: uppercase;">
                     <span>Register</span>
                 </RouterLink>
-            <li class="relative">
-                <RouterLink v-if="loggedIn" to="/profile" class="profile-link">
+            <li class="relative" v-if="isLoggedIn">
+                <RouterLink to="/profile" class="profile-link">
                     <img src="" alt="Profilbild" width="30" height="30" class="rounded-full" />
-                    <span>{{ userName }}</span>
+                    <span>{{ username }}</span>
                 </RouterLink>
                 <ul class="submenu">
                     <li>
@@ -90,7 +90,7 @@
 
 <script setup>
 import { RouterLink } from "vue-router";
-const userName = "";
+const isLoggedIn = false;
 </script>
 
 <style scoped>
