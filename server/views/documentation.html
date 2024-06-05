@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Documentation</title>
+
+    <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body id="top">
+    <header>
+        <button type="button" id="menu-button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+            </svg>
+        </button>
+        <nav class="nav" name="nav-menu">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="">Controllers</a>
+                    <ul class="nav-dropdown">
+                        <li class="nav-item"><a class="nav-item-a" href="">Authentication</a></li>
+                        <li class="nav-item"><a class="nav-item-a" href="">Verification</a></li>
+                        <li class="nav-item"><a class="nav-item-a" href="">User</a></li>
+                        <li class="nav-item"><a class="nav-item-a" href="">Role</a></li>
+                        <li class="nav-item"><a class="nav-item-a" href="">Tag</a></li>
+                        <li class="nav-item"><a class="nav-item-a" href="">Category</a></li>
+                        <li class="nav-item"><a class="nav-item-a" href="">Post</a></li>
+                        <li class="nav-item"><a class="nav-item-a" href="">Ticket</a></li>
+                        <li class="nav-item"><a class="nav-item-a" href="">Partnership</a></li>
+                        <li class="nav-item"><a class="nav-item-a" href="">Social Club</a></li>
+                        <li class="nav-item"><a class="nav-item-a" href="">Profile</a></li>
+                        <li class="nav-item"><a class="nav-item-a" href="">Notification</a></li>
+                        <li class="nav-item"><a class="nav-item-a" href="">File</a></li>
+                        <li class="nav-item"><a class="nav-item-a" href="">Payment</a></li>
+                        <li class="nav-item"><a class="nav-item-a" href="">Referral</a></li>
+                        <li class="nav-item"><a class="nav-item-a" href="">Analytics</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a class="nav-item-a" href="">Database</a>
+                    <ul class="nav-dropdown">
+                        <li class="nav-item"><a class="nav-item-a" href="">Connection</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a class="nav-item-a" href="">Middleware</a>
+                    <ul class="nav-dropdown">
+                        <li class="nav-item"><a class="nav-item-a" href="">Authentication</a></li>
+                        <li class="nav-item"><a class="nav-item-a" href="">oAuth2</a></li>
+                        <li class="nav-item"><a class="nav-item-a" href="">Role</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a class="nav-item-a" href="">Models</a>
+                    <ul class="nav-dropdown">
+                        <li class="nav-item"><a class="nav-item-a" href="">Category</a></li>
+                        <li class="nav-item"><a class="nav-item-a" href="">File</a></li>
+                        <li class="nav-item"><a class="nav-item-a" href="">Notification</a></li>
+                        <li class="nav-item"><a class="nav-item-a" href="">Partnership</a></li>
+                        <li class="nav-item"><a class="nav-item-a" href="">Payment</a></li>
+                        <li class="nav-item"><a class="nav-item-a" href="">Post</a></li>
+                        <li class="nav-item"><a class="nav-item-a" href="">Product</a></li>
+                        <li class="nav-item"><a class="nav-item-a" href="">Profile</a></li>
+                        <li class="nav-item"><a class="nav-item-a" href="">Referral</a></li>
+                        <li class="nav-item"><a class="nav-item-a" href="">Role</a></li>
+                        <li class="nav-item"><a class="nav-item-a" href="">Social Club</a></li>
+                        <li class="nav-item"><a class="nav-item-a" href="">Tag</a></li>
+                        <li class="nav-item"><a class="nav-item-a" href="">Ticket</a></li>
+                        <li class="nav-item"><a class="nav-item-a" href="">User</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a class="nav-item-a" href="">Routes</a>
+                    <ul class="nav-dropdown">
+                        <li class="nav-item"><a class="nav-item-a" href="">API View</a></li>
+                        <li class="nav-item"><a class="nav-item-a" href="">Authentication</a></li>
+                        <li class="nav-item"><a class="nav-item-a" href="">Verification</a></li>
+                        <li class="nav-item"><a class="nav-item-a" href="">User</a></li>
+                        <li class="nav-item"><a class="nav-item-a" href="">Role</a></li>
+                        <li class="nav-item"><a class="nav-item-a" href="">Tag</a></li>
+                        <li class="nav-item"><a class="nav-item-a" href="">Category</a></li>
+                        <li class="nav-item"><a class="nav-item-a" href="">Post</a></li>
+                        <li class="nav-item"><a class="nav-item-a" href="">Ticket</a></li>
+                        <li class="nav-item"><a class="nav-item-a" href="">Partnership</a></li>
+                        <li class="nav-item"><a class="nav-item-a" href="">Social Club</a></li>
+                        <li class="nav-item"><a class="nav-item-a" href="">Profile</a></li>
+                        <li class="nav-item"><a class="nav-item-a" href="">Notification</a></li>
+                        <li class="nav-item"><a class="nav-item-a" href="">File</a></li>
+                        <li class="nav-item"><a class="nav-item-a" href="">Payment</a></li>
+                        <li class="nav-item"><a class="nav-item-a" href="">Referral</a></li>
+                        <li class="nav-item"><a class="nav-item-a" href="">Analytics</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a class="nav-item-a" href="">Services</a>
+                    <ul class="nav-dropdown">
+                        <li class="nav-item"><a class="nav-item-a" href="">Analytics</a></li>
+                        <li class="nav-item"><a class="nav-item-a" href="">Attack</a></li>
+                        <li class="nav-item"><a class="nav-item-a" href="">Notification</a></li>
+                        <li class="nav-item"><a class="nav-item-a" href="">Payment</a></li>
+                        <li class="nav-item"><a class="nav-item-a" href="">SocketIO</a></li>
+                        <li class="nav-item"><a class="nav-item-a" href="">Upload</a></li>
+                        <li class="nav-item"><a class="nav-item-a" href="">Verification</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a class="nav-item-a" href="">Utils</a>
+                    <ul class="nav-dropdown">
+                        <li class="nav-item"><a class="nav-item-a" href="">Apple Pay</a></li>
+                        <li class="nav-item"><a class="nav-item-a" href="">Bcrypt</a></li>
+                        <li class="nav-item"><a class="nav-item-a" href="">Google API</a></li>
+                        <li class="nav-item"><a class="nav-item-a" href="">Google Pay</a></li>
+                        <li class="nav-item"><a class="nav-item-a" href="">JsonWebToken</a></li>
+                        <li class="nav-item"><a class="nav-item-a" href="">Logger</a></li>
+                        <li class="nav-item"><a class="nav-item-a" href="">Multer</a></li>
+                        <li class="nav-item"><a class="nav-item-a" href="">oAuth2</a></li>
+                        <li class="nav-item"><a class="nav-item-a" href="">Paypal</a></li>
+                        <li class="nav-item"><a class="nav-item-a" href="">Stripe API</a></li>
+                        <li class="nav-item"><a class="nav-item-a" href="">Validation</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a class="nav-item-a" href="">Views</a>
+                    <ul class="nav-dropdown">
+                        <li class="nav-item"><a class="nav-item-a" href="">Documentation</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div>
+            <h1>API Documentation</h1>
+            <p>The complete documentation over the backend api on a onepage.</p>
+        </div>
+        <section>
+            <div>
+                <h2>API View Routes</h2>
+                <p>The sites of the backend api with informations and you can watch this.</p>
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+        </section>
+        <section>
+            <div>
+                <h2>API Authentication Routes</h2>
+                <p>The authentication routes in the backend api with jwt and bcrypt.</p>
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+        </section>
+        <section>
+            <div>
+                <h2>API User Routes</h2>
+                <p>The user crud routes in the backend api.</p>
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+        </section>
+        <section>
+            <div>
+                <h2>API Category Routes</h2>
+                <p>The category crud routes in the backend api.</p>
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+        </section>
+        <section>
+            <div>
+                <h2>API Tag Routes</h2>
+                <p>The tag crud routes in the backend api.</p>
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+        </section>
+        <section>
+            <div>
+                <h2>API Post Routes</h2>
+                <p>The post crud routes in the backend api.</p>
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+        </section>
+        <section>
+            <div>
+                <h2>API Ticket Routes</h2>
+                <p>The ticket crud routes in the backend api.</p>
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <footer id="down">
+        <section>
+            <address>
+                <a href="">LinkedIn</a>
+                <a href="">GitHub</a>
+                <a href="">Instagram</a>
+                <a href="">X (Twitter)</a>
+                <a href="">YouTube</a>
+                <a href="">Twitch</a>
+            </address>
+        </section>
+        <section>
+            <div>
+                <p>Made by <a href="">Vecto. (Tim Hauke)</a></p>
+            </div>
+            <div>
+                <p>Copyright &copy; 2020</p>
+            </div>
+        </section>
+    </footer>
+    <script src="./script.js"></script>
+</body>
+
+</html>
